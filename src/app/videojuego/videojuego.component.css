@@ -1,0 +1,13 @@
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#videojuego {
+  width: 90%;
+  display: block;
+  border: 2px solid #000000; /* Borde de 2 píxeles, sólido, de color negro */
+  padding: 10px; /* Opcional: añade un poco de espacio interior para el contenido */
+  margin: 10px; /* Opcional: añade un margen para separar el componente de otros elementos */
+}
