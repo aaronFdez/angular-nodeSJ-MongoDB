@@ -1,0 +1,13 @@
+#botines {
+  width: 100%; /* El ancho del contenedor será el 100% del espacio disponible */
+  max-width: 300px; /* Ajusta este valor según el tamaño máximo deseado */
+  height: auto; /* La altura se ajustará automáticamente según el contenido */
+  overflow: hidden; /* Evita que el contenido desborde */
+}
+
+#botines img {
+  width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+  height: auto; /* Mantendrá la proporción original */
+  display: block; /* Elimina cualquier espacio en blanco debajo de la imagen */
+  object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+}
