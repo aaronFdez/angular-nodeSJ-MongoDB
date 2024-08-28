@@ -1,13 +1,45 @@
-#botines {
-  width: 100%; /* El ancho del contenedor será el 100% del espacio disponible */
-  max-width: 300px; /* Ajusta este valor según el tamaño máximo deseado */
-  height: auto; /* La altura se ajustará automáticamente según el contenido */
-  overflow: hidden; /* Evita que el contenido desborde */
+#botines ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#botines li {
+  display: flex;
+  align-items: center;
+  position: relative; /* Necesario para que el texto "Agotado" se posicione correctamente */
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
 #botines img {
-  width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
-  height: auto; /* Mantendrá la proporción original */
-  display: block; /* Elimina cualquier espacio en blanco debajo de la imagen */
-  object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+  margin-right: 15px;
+}
+
+.botin-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilo para botines que no están en stock */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+/* Estilo para el texto "Agotado" */
+.agotado-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(-45deg); /* Rota el texto en 45 grados hacia la izquierda */
+  transform-origin: 0 100%; /* El origen de la transformación es la esquina inferior izquierda */
+  font-size: 2em; /* Tamaño del texto ajustable según el diseño */
+  color: red; /* Color del texto */
+  font-weight: bold;
+  z-index: 1; /* Asegura que se superponga sobre otros elementos */
+  pointer-events: none; /* Para evitar la interacción con este texto */
 }

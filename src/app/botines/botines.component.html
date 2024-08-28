@@ -1,4 +1,24 @@
 <div id="botines">
-    <h2>{{titulo}}</h2>
-    <img src="https://media.revistagq.com/photos/5cb74bd97806b13d53b44600/master/pass/zapatillas_mas_caras_del_mundo_2019_7347.png"  alt="" />
+    <h2>{{ titulo }}</h2>
+    <div>
+        <input 
+            type="text" 
+            [(ngModel)]="nuevaMarca" 
+            (keypress)="agregarMarca($event)" 
+            placeholder="Añadir nueva marca" />
+    </div>
+
+    <h4>Tenemos botines de las mejores marcas como {{formatMarcas()}}</h4>
+    <ul>
+        <li *ngFor="let botin of botines" [class.disabled]="!botin.stock">
+            <img [src]="botin.imagen" alt="{{ botin.nombre }}" width="100">
+            <div class="botin-info">
+                <strong>{{ botin.nombre }}</strong> - {{ botin.precio }}€
+                <span *ngIf="botin.precio <= 60">{{ '¡en oferta!' | uppercase }}</span>
+                <p>{{ botin.marca }} - {{ botin.color }}</p>
+                <span *ngIf="botin.stock; else outOfStock">En stock</span>
+                <ng-template #outOfStock><span class="agotado-text">Agotado</span></ng-template>
+            </div>
+        </li>
+    </ul>
 </div>
