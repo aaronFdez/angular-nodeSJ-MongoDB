@@ -1,0 +1,15 @@
+.home {
+  padding: 2% 0; /* Añade padding en la parte superior e inferior */
+}
+
+.btn {
+  font-size: 1.1rem; /* Aumenta el tamaño del texto del botón */
+}
+
+.row {
+  margin-top: 2rem; /* Espacio superior entre los botones y el texto */
+}
+
+.col-12 {
+  margin-bottom: 1rem; /* Espacio inferior entre los botones en pantallas pequeñas */
+}
