@@ -1,15 +1,23 @@
 .home {
-  padding: 2% 0; /* Añade padding en la parte superior e inferior */
+  text-align: center;
+  padding: 2% 0;
 }
 
-.btn {
-  font-size: 1.1rem; /* Aumenta el tamaño del texto del botón */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre botones */
+  margin-bottom: 2rem; /* Espacio debajo de los botones */
 }
 
-.row {
-  margin-top: 2rem; /* Espacio superior entre los botones y el texto */
-}
 
-.col-12 {
-  margin-bottom: 1rem; /* Espacio inferior entre los botones en pantallas pequeñas */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
 }
