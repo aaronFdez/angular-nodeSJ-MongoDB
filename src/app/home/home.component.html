@@ -1,3 +1,13 @@
 <div class="home container">
 <h2>Página principal</h2>
+  <div *ngIf="isIdentificated; else elseBlock">
+    <p>Estas identificado</p>
+  </div>
+  <ng-template #elseBlock>
+  <p>No estás identificado</p>
+  </ng-template>
+  <button class="btn btn-primary w-20" (click)="login()">
+    <span *ngIf="!isIdentificated; else logout">Login</span>
+  </button>
+  <ng-template #logout>Logout</ng-template>
 </div>
