@@ -22,3 +22,10 @@ footer {
   display: block;
   margin: 2%;
 }
+
+  .actived {
+    background-color: #0056b3; /* Color de fondo cuando el botón está activo */
+    color: #ffffff; /* Color del texto cuando el botón está activo */
+    border-color: #004494; /* Color del borde cuando el botón está activo */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Sombra alrededor del botón activo */
+  }

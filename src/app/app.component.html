@@ -1,19 +1,25 @@
 <header>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
-        <a class="btn btn-primary w-100" [routerLink]="['/videojuegos']">Ir a videojuegos</a>
+      <div class="col d-flex justify-content-center">
+        <a class="btn btn-primary w-100" [routerLink]="['/']" [routerLinkActive]="['actived']">Home</a>
       </div>
-      <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
-        <a class="btn btn-primary w-100" [routerLink]="['/cursos']">Ir a cursos</a>
+      <div class="col d-flex justify-content-center">
+        <a class="btn btn-primary w-100" [routerLink]="['/videojuegos']" [routerLinkActive]="['actived']">Ir a videojuegos</a>
       </div>
-      <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
-        <a class="btn btn-primary w-100" [routerLink]="['/botines']">Ir a botines</a>
+      <div class="col d-flex justify-content-center">
+        <a class="btn btn-primary w-100" [routerLink]="['/cursos']" [routerLinkActive]="['actived']">Ir a cursos</a>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <a class="btn btn-primary w-100" [routerLink]="['/cursos', 'angular']" [routerLinkActive]="['actived']">Ir a curso angular</a>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <a class="btn btn-primary w-100" [routerLink]="['/botines']" [routerLinkActive]="['actived']">Ir a botines</a>
       </div>
     </div>
   </div>
 </header>
-
+<hr>
 <main>
   <router-outlet></router-outlet>
 </main>

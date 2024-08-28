@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'cursos',
+  selector: 'app-cursos',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './cursos.component.html',
-  styleUrl: './cursos.component.css'
+  styleUrls: ['./cursos.component.css']
 })
-export class CursosComponent {
+export class CursosComponent implements OnInit {
+  nombreCurso: string | null = null;
 
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.nombreCurso = params['nombre']; 
+    });
+  }
 }
