@@ -1,10 +1,22 @@
 <div id="videojuego">
-  <p>videojuego component!</p>
-  <img src="https://gaming-cdn.com/images/products/17097/orig/black-myth-wukong-digital-deluxe-edition-digital-deluxe-edition-pc-juego-steam-europe-us-canada-cover.jpg?v=1724143252" alt="Avatar" class="avatar"/>
-  <ul>
-    <li>Black Myth</li>
-    <li>GTA 6</li>
-    <li>Tekken 15</li>
-    <li>Super Luiggi Bros</li>
-  </ul>
+  <div class="tarjeta" *ngFor="let game of games" (click)="openModal(game)">
+    <img [src]="game.image" [alt]="game.title">
+    <div class="detalles">
+      <h3>{{ game.title }}</h3>
+      <p><strong>Fecha de Lanzamiento:</strong> {{ game.releaseDate }}</p>
+      <p><strong>Descripción:</strong> {{ game.description }}</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal" class="modal" *ngIf="selectedGame">
+  <div class="modal-contenido">
+    <span class="cerrar" (click)="closeModal()">&times;</span>
+    <img [src]="selectedGame.image" [alt]="selectedGame.title">
+    <div class="detalles">
+      <h3>{{ selectedGame.title }}</h3>
+      <p><strong>Fecha de Lanzamiento:</strong> {{ selectedGame.releaseDate }}</p>
+      <p><strong>Descripción:</strong> {{ selectedGame.description }}</p>
+    </div>
+  </div>
 </div>

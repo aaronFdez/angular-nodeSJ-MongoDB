@@ -1,11 +1,10 @@
 <div>
-  <p>External works!</p>
-
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-12 col-md-6">
         <div class="mb-4">
-          <input type="number" [(ngModel)]="userId" class="form-control" placeholder="Enter user ID" (keypress)="onKeyPress($event,userId)" >
+          <input type="number" [(ngModel)]="userId" class="form-control" placeholder="Enter user ID"
+                 (keypress)="onKeyPress($event,userId)" (keyup)="onKeyUp(userId)"  >
         </div>
 
         <div *ngIf="user !== null; else spinner" class="card shadow-lg">

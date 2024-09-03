@@ -1,13 +1,123 @@
 img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 #videojuego {
   width: 90%;
-  display: block;
-  border: 2px solid #000000; /* Borde de 2 píxeles, sólido, de color negro */
-  padding: 10px; /* Opcional: añade un poco de espacio interior para el contenido */
-  margin: 10px; /* Opcional: añade un margen para separar el componente de otros elementos */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  max-width: 48%;
+  flex: 1 1 48%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta img {
+  border-radius: 8px;
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.tarjeta .detalles {
+  flex: 1;
+}
+
+.tarjeta .detalles h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.tarjeta .detalles p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  animation: slide-down 0.3s ease-out;
+}
+
+.modal img {
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.modal .detalles h3 {
+  font-size: 32px;
+}
+
+.modal .detalles p {
+  font-size: 18px;
+  color: #333;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

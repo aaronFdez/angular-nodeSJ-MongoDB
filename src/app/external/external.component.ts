@@ -42,6 +42,10 @@ export class ExternalComponent implements OnInit {
     }
   }
 
+  onKeyUp(userId: number) {
+    this.getExternalUserById(userId);
+  }
+
   ngOnInit(): void {
     this.getExternalUserById(2);
   }
