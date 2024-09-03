@@ -11,13 +11,13 @@
         <a class="btn btn-primary w-100" [routerLink]="['/cursos']" [routerLinkActive]="['actived']">Ir a cursos</a>
       </div>
       <div class="col d-flex justify-content-center">
-        <a class="btn btn-primary w-100" [routerLink]="['/cursos', 'angular']" [routerLinkActive]="['actived']">Ir a curso angular</a>
-      </div>
-      <div class="col d-flex justify-content-center">
         <a class="btn btn-primary w-100" [routerLink]="['/botines']" [routerLinkActive]="['actived']">Ir a botines</a>
       </div>
       <div class="col d-flex justify-content-center">
         <a class="btn btn-primary w-100" [routerLink]="['/external']" [routerLinkActive]="['actived']">Ir a external</a>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <a class="btn btn-primary w-100" [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Ir a contacto</a>
       </div>
     </div>
   </div>
@@ -28,5 +28,5 @@
 </main>
 
 <footer class="footer">
-  <p>© 2024 Mi Aplicación Angular</p>
+  <p>© {{date | date:'dd/MM/yyyy'}} Mi Aplicación Angular</p>
 </footer>
